@@ -1,0 +1,38 @@
+---
+title: "EDS221 Day 10"
+format: html
+editor: visual
+---
+
+```{r}
+library(tidyverse)
+library(ggplot2)
+```
+
+## Warm-up
+
+Write a for loop starting with c(2,4,6,8,10,12), add a value and the one that immediately precedes it, returning a new vector
+
+```{r}
+# vec <- c(2, 4, 6, 8, 10, 12)
+# new_vec <- c(0, 0, 0, 0, 0, 0)
+# for (i in 2:seq_along(new_vec)) {
+#   new_vec[i-1] = vec[i] + vec[i-1]
+# }
+# new_vec
+```
+
+```{r}
+library(help = "datasets")
+```
+
+```{r}
+ggplot(data = trees, aes(x = Height, y = Volume)) + 
+  geom_point() +
+  theme(title = element_text(size = 18, color = "purple"),
+        plot.background = element_rect(fill = "green"),
+        panel.background = element_rect(fill = "orange"),
+        axis.title.x = element_text(color = "black"),
+        panel.grid = element_line(color = "pink"),
+        panel.grid.minor = element_line(color = "yellow")) # higher res wins out
+```
